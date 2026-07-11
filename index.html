@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Service Portal</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🚗 Car Service Portal</h1>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#booking">Book Service</a>
+        <a href="#history">Service History</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Complete Car Maintenance Solution</h2>
+    <p>Book service, track maintenance and view service records.</p>
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Oil Change</h3>
+<p>Complete engine oil replacement.</p>
+</div>
+
+<div class="card">
+<h3>Brake Service</h3>
+<p>Brake pad inspection and replacement.</p>
+</div>
+
+<div class="card">
+<h3>Wheel Alignment</h3>
+<p>Professional wheel balancing.</p>
+</div>
+
+<div class="card">
+<h3>Battery Check</h3>
+<p>Battery health inspection.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="booking">
+
+<h2>Book Service</h2>
+
+<form id="serviceForm">
+
+<input
+type="text"
+id="owner"
+placeholder="Owner Name"
+required>
+
+<input
+type="text"
+id="car"
+placeholder="Car Model"
+required>
+
+<input
+type="text"
+id="plate"
+placeholder="License Plate"
+required>
+
+<input
+type="date"
+id="date"
+required>
+
+<select id="service">
+<option>Oil Change</option>
+<option>Brake Service</option>
+<option>Wheel Alignment</option>
+<option>Battery Check</option>
+</select>
+
+<button type="submit">Book Service</button>
+
+</form>
+
+</section>
+
+<section id="history">
+
+<h2>Service History</h2>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Owner</th>
+<th>Car</th>
+<th>Plate</th>
+<th>Date</th>
+<th>Service</th>
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: support@carservice.com</p>
+<p>Phone: +1 780-123-4567</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Car Service Portal</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
