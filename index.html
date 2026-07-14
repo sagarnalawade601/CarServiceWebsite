@@ -3,143 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Car Service Portal</title>
+<title>Speed Auto Service</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#0d47a1;
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+.hero{
+    background:url("image/CarServiceBg.jpeg") center/cover;
+    height:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,.6);
+    color:white;
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+section{
+    padding:60px 80px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0d47a1;
+}
+
+.price-table{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.price{
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+}
+
+.price h2{
+    color:#ff9800;
+    margin:15px 0;
+}
+
+.about{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.about img{
+    width:450px;
+    border-radius:10px;
+}
+
+.about-text{
+    flex:1;
+}
+
+form{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+}
+
+button{
+    background:#0d47a1;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    cursor:pointer;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+section{
+padding:40px 20px;
+}
+
+.about img{
+width:100%;
+}
+
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>🚗 Car Service Portal</h1>
 
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#booking">Book Service</a>
-        <a href="#history">Service History</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<h2>🚗 Speed Auto Service</h2>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
 <section class="hero">
-    <h2>Complete Car Maintenance Solution</h2>
-    <p>Book service, track maintenance and view service records.</p>
+
+<div class="hero-content">
+
+<h1>Professional Car Service</h1>
+
+<p>Reliable • Affordable • Trusted Mechanics</p>
+
+<a class="btn" href="#contact">Book Appointment</a>
+
+</div>
+
 </section>
 
 <section id="services">
 
 <h2>Our Services</h2>
+<br>
 
-<div class="cards">
+<div class="services">
 
 <div class="card">
 <h3>Oil Change</h3>
-<p>Complete engine oil replacement.</p>
+<p>Premium engine oil replacement with filter inspection.</p>
 </div>
 
 <div class="card">
 <h3>Brake Service</h3>
-<p>Brake pad inspection and replacement.</p>
+<p>Brake pads, discs, fluid inspection and replacement.</p>
 </div>
 
 <div class="card">
-<h3>Wheel Alignment</h3>
-<p>Professional wheel balancing.</p>
+<h3>Engine Diagnostics</h3>
+<p>Computerized scanning and engine troubleshooting.</p>
 </div>
 
 <div class="card">
-<h3>Battery Check</h3>
-<p>Battery health inspection.</p>
+<h3>Tire Service</h3>
+<p>Rotation, balancing, replacement and wheel alignment.</p>
+</div>
+
+<div class="card">
+<h3>Battery Replacement</h3>
+<p>Battery testing and installation.</p>
+</div>
+
+<div class="card">
+<h3>AC Repair</h3>
+<p>Air conditioning diagnosis and gas refill.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="booking">
+<section id="pricing">
 
-<h2>Book Service</h2>
+<h2>Service Pricing</h2>
 
-<form id="serviceForm">
+<br>
 
-<input
-type="text"
-id="owner"
-placeholder="Owner Name"
-required>
+<div class="price-table">
 
-<input
-type="text"
-id="car"
-placeholder="Car Model"
-required>
+<div class="price">
+<h3>Basic Service</h3>
+<h2>$79</h2>
+<p>Oil Change</p>
+<p>Inspection</p>
+<p>Fluid Top-up</p>
+</div>
 
-<input
-type="text"
-id="plate"
-placeholder="License Plate"
-required>
+<div class="price">
+<h3>Standard Service</h3>
+<h2>$149</h2>
+<p>Everything in Basic</p>
+<p>Brake Inspection</p>
+<p>Tire Rotation</p>
+</div>
 
-<input
-type="date"
-id="date"
-required>
+<div class="price">
+<h3>Premium Service</h3>
+<h2>$299</h2>
+<p>Complete Inspection</p>
+<p>Diagnostics</p>
+<p>Brake Service</p>
+<p>AC Check</p>
+</div>
 
-<select id="service">
-<option>Oil Change</option>
-<option>Brake Service</option>
-<option>Wheel Alignment</option>
-<option>Battery Check</option>
-</select>
-
-<button type="submit">Book Service</button>
-
-</form>
+</div>
 
 </section>
 
-<section id="history">
+<section id="about">
 
-<h2>Service History</h2>
+<h2>About Us</h2>
 
-<table>
+<br>
 
-<thead>
+<div class="about">
 
-<tr>
-<th>Owner</th>
-<th>Car</th>
-<th>Plate</th>
-<th>Date</th>
-<th>Service</th>
-</tr>
+<img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=900&q=80">
 
-</thead>
+<div class="about-text">
 
-<tbody id="historyTable">
+<p>
 
-</tbody>
+Speed Auto Service has over 15 years of experience providing quality automotive repair and maintenance. Our certified technicians use modern diagnostic tools and genuine parts to keep your vehicle running safely.
 
-</table>
+</p>
+
+<br>
+
+<p>
+
+✔ Certified Mechanics<br><br>
+✔ Same-Day Service<br><br>
+✔ Affordable Pricing<br><br>
+✔ Customer Satisfaction Guaranteed
+
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 <section id="contact">
 
-<h2>Contact</h2>
+<h2>Contact Us</h2>
 
-<p>Email: support@carservice.com</p>
-<p>Phone: +1 780-123-4567</p>
+<br>
+
+<form>
+
+<input type="text" placeholder="Sagar Nalawade">
+
+<input type="email" placeholder="sagarnalawade601@gmail.com">
+
+<input type="tel" placeholder="+1 647-280-8429">
+
+<textarea rows="5" placeholder="Describe your vehicle problem"></textarea>
+
+<button>Book Service</button>
+
+</form>
 
 </section>
 
 <footer>
 
-<p>© 2026 Car Service Portal</p>
+<p>© 2026 Speed Auto Service | All Rights Reserved</p>
 
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
